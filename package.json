@@ -1,5 +1,6 @@
 {
   "name": "koa-better-body-without-git",
+  "description": "Faster download speed to install koa-better-body",
   "version": "1.0.0",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",
