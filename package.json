@@ -4,6 +4,11 @@
   "version": "1.0.0",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",
+  "author": "王珏 <wangjuesix@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangjue666/koa-better-body-without-git"
+  },
   "scripts": {
     "prepare": "modern build && husky install",
     "dev": "modern dev",
