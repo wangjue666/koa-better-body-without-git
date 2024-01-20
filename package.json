@@ -1,6 +1,6 @@
 {
   "name": "koa-better-body-without-git",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",
   "scripts": {
@@ -28,15 +28,18 @@
     "node_modules/",
     "dist/"
   ],
-  "dependencies": {},
-  "peerDependencies": {},
+  "dependencies": {
+    "extend-shallow": "^3.0.2",
+    "formidable": "^3.5.1",
+    "raw-body": "^2.5.2"
+  },
   "devDependencies": {
-    "@modern-js/module-tools": "2.46.1",
     "@modern-js/eslint-config": "2.46.1",
-    "rimraf": "~3.0.2",
+    "@modern-js/module-tools": "2.46.1",
+    "husky": "~8.0.1",
     "lint-staged": "~13.1.0",
     "prettier": "~2.8.1",
-    "husky": "~8.0.1"
+    "rimraf": "~3.0.2"
   },
   "sideEffects": [],
   "publishConfig": {

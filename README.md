@@ -1,46 +1,50 @@
-# Modern.js Package
+# koa-better-body-without-git
 
-## Setup
+This is a substitute for `koa-better-body`, but without `koa-body-parser`. Faster download speed
 
-Install the dependencies:
+## Why?
 
-```bash
-pnpm run install
+Due to the dependency source of `koa-body-parsers` in GitHub, Unable to adapt to CDN nodes, resulting
+in particularly slow download speed! Even unable to download! And the author of `koa-better-body` no longer maintains the project..., so kill it~
+
+```
+ "dependencies": {
+    "extend-shallow": "^3.0.2",
+    "formidable": "^1.2.1",
+    "koa-body-parsers": "tunnckocore/body-parsers#patch-1"
+  },
 ```
 
-## Get Started
+## before
 
-Run and debug the module:
+```
+const body = require('koa-better-body');
+const convert = require('koa-convert');
 
-```bash
-pnpm run dev
+server.use(
+    convert(body({
+        uploadDir: config.uploadDir,
+        keepExtensions: true,
+        formLimit: "5mb",
+        jsonLimit: "5mb"
+    }))
+)
+
 ```
 
-Run test cases:
+## now
 
-```bash
-pnpm run test
 ```
+const body = require('koa-better-body-without-git');
+const convert = require('koa-convert');
 
-Build the module for production:
-
-```bash
-pnpm run build
+// here is call body.default
+server.use(
+    convert(body.default({
+        uploadDir: config.uploadDir,
+        keepExtensions: true,
+        formLimit: "5mb",
+        jsonLimit: "5mb"
+    }))
+)
 ```
-
-Enable optional features:
-
-```bash
-pnpm run new
-```
-
-Other commands:
-
-```bash
-pnpm run lint         # Lint and fix source files
-pnpm run change       # Add a new changeset
-pnpm run bump         # Update version and changelog via changeset
-pnpm run release      # Release the package
-```
-
-For more information, see the [Modern.js Module documentation](https://modernjs.dev/module-tools/en).
