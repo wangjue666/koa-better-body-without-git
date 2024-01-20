@@ -15,6 +15,12 @@ in particularly slow download speed! Even unable to download! And the author of 
   },
 ```
 
+## install
+
+```
+npm i koa-better-body-without-git
+```
+
 ## before
 
 ```
