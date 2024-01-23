@@ -1,7 +1,7 @@
 {
   "name": "koa-better-body-without-git",
   "description": "Faster download speed to install koa-better-body",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./dist/lib/index.js",
   "module": "./dist/es/index.js",
   "author": "王珏 <wangjuesix@gmail.com>",
@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "extend-shallow": "^3.0.2",
-    "formidable": "^3.5.1",
+    "formidable": "^1.2.1",
     "raw-body": "^2.5.2"
   },
   "devDependencies": {
